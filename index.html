@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>宇航员的旅程</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>宇航员的旅程 🚀</h1>
+      <p>以你选择的身份，体验爱因斯坦思考广义相对论的关键瞬间。</p>
+    </header>
+
+    <section id="setup" class="card">
+      <h2>角色设定</h2>
+      <label>
+        你的身份
+        <select id="roleSelect">
+          <option value="pilot">试飞员（擅长速度与操作）</option>
+          <option value="scientist">理论科学家（擅长推理）</option>
+          <option value="engineer">空间工程师（擅长系统思维）</option>
+        </select>
+      </label>
+
+      <label>
+        你的名字
+        <input id="playerName" type="text" placeholder="输入你的名字" maxlength="20" />
+      </label>
+
+      <button id="startBtn">开始旅程</button>
+    </section>
+
+    <section id="game" class="card hidden">
+      <div class="hud">
+        <p><strong>旅者：</strong><span id="hudName"></span></p>
+        <p><strong>身份：</strong><span id="hudRole"></span></p>
+        <p><strong>领悟值：</strong><span id="score">0</span></p>
+      </div>
+
+      <h2 id="sceneTitle"></h2>
+      <p id="sceneText"></p>
+      <div id="options" class="options"></div>
+      <button id="restartBtn" class="hidden">重新开始</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
