@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>微信公众号排版助手</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="panel editor">
+        <h1>微信公众号排版助手</h1>
+        <p class="subtitle">粘贴原文，一键整理为更适合公众号发布的版式。</p>
+
+        <label for="sourceText">原始内容</label>
+        <textarea id="sourceText" placeholder="把文章粘贴到这里..."></textarea>
+
+        <fieldset>
+          <legend>排版选项</legend>
+          <label><input type="checkbox" id="normalizePunctuation" checked /> 中文标点规范化</label>
+          <label><input type="checkbox" id="smartTitle" checked /> 首行识别为标题</label>
+          <label><input type="checkbox" id="smartParagraph" checked /> 智能分段（段落间空一行）</label>
+          <label><input type="checkbox" id="trimSpaces" checked /> 去除多余空格</label>
+        </fieldset>
+
+        <div class="actions">
+          <button id="formatBtn">自动排版</button>
+          <button id="copyBtn" class="secondary">复制结果</button>
+        </div>
+      </section>
+
+      <section class="panel preview">
+        <h2>排版结果</h2>
+        <textarea id="resultText" readonly placeholder="排版结果会显示在这里"></textarea>
+
+        <h3>预览效果</h3>
+        <article id="previewArticle"></article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
